@@ -1,0 +1,437 @@
+{
+	"Angular": {
+		"cats": [
+			12
+		],
+		"description": "Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google.",
+		"dom": {
+			"[ng-version]": {
+				"attributes": {
+					"ng-version": "^([\\d.]+)\\;version:\\1"
+				}
+			}
+		},
+		"excludes": [
+			"AngularDart",
+			"AngularJS"
+		],
+		"icon": "Angular.svg",
+		"js": {
+			"ng.coreTokens": "",
+			"ng.probe": ""
+		},
+		"website": "https://angular.io"
+	},
+	"AngularJS": {
+		"cats": [
+			12
+		],
+		"description": "AngularJS is a JavaScript-based open-source web application framework led by the Angular Team at Google.",
+		"excludes": [
+			"Angular",
+			"AngularDart"
+		],
+		"html": [
+			"\u003c(?:div|html)[^\u003e]+ng-app=",
+			"\u003cng-app"
+		],
+		"icon": "AngularJS.svg",
+		"js": {
+			"angular": "",
+			"angular.version.full": "^(.+)$\\;version:\\1"
+		},
+		"scripts": [
+			"angular[.-]([\\d.]*\\d)[^/]*\\.js\\;version:\\1",
+			"/([\\d.]+(?:-?rc[.\\d]*)*)/angular(?:\\.min)?\\.js\\;version:\\1",
+			"\\bangular.{0,32}\\.js"
+		],
+		"website": "https://angularjs.org"
+	},
+	"Apache Tomcat": {
+		"cats": [
+			22
+		],
+		"cpe": "cpe:/a:apache:tomcat",
+		"description": "Apache Tomcat is an open-source implementation of the Java Servlet, JavaServer Pages, Java Expression Language and WebSocket technologies.",
+		"headers": {
+			"Server": "^Apache-Coyote",
+			"X-Powered-By": "\\bTomcat\\b(?:-([\\d.]+))?\\;version:\\1"
+		},
+		"icon": "Apache Tomcat.svg",
+		"implies": "Java",
+		"website": "http://tomcat.apache.org"
+	},
+	"Django": {
+		"cats": [
+			18
+		],
+		"cpe": "cpe:/a:djangoproject:django",
+		"description": "Django is a Python-based free and open-source web application framework.",
+		"html": "(?:powered by \u003ca[^\u003e]+\u003eDjango ?([\\d.]+)?\u003c\\/a\u003e|\u003cinput]*[^>name=[\"']csrfmiddlewaretoken[\"'][^\u003e]*\u003e)\\;version:\\1",
+		"icon": "Django.png",
+		"implies": "Python",
+		"js": {
+			"__admin_media_prefix__": "",
+			"django": ""
+		},
+		"website": "https://djangoproject.com"
+	},
+	"Docker": {
+		"cats": [
+			60
+		],
+		"cpe": "cpe:/a:docker:engine",
+		"description": "Docker is a tool designed to make it easier to create, deploy, and run applications by using containers.",
+		"html": "\u003c!-- This comment is expected by the docker HEALTHCHECK  --\u003e",
+		"icon": "Docker.svg",
+		"website": "https://www.docker.com/"
+	},
+	"Flask": {
+		"cats": [
+			18,
+			22
+		],
+		"headers": {
+			"Server": "Werkzeug/?([\\d\\.]+)?\\;version:\\1"
+		},
+		"icon": "Flask.png",
+		"implies": "Python",
+		"website": "http://flask.pocoo.org"
+	},
+	"Go": {
+		"cats": [
+			27
+		],
+		"cpe": "cpe:/a:golang:go",
+		"icon": "Go.svg",
+		"website": "https://golang.org"
+	},
+	"Google Analytics": {
+		"cats": [
+			10
+		],
+		"cookies": {
+			"__utma": "",
+			"_ga": "",
+			"_gat": ""
+		},
+		"description": "Google Analytics is a free web analytics service that tracks and reports website traffic.",
+		"html": "\u003camp-analytics [^\u003e]*type=[\"']googleanalytics[\"']",
+		"icon": "Google Analytics.svg",
+		"js": {
+			"GoogleAnalyticsObject": "",
+			"gaGlobal": ""
+		},
+		"scripts": "google-analytics\\.com/(?:ga|urchin|analytics)\\.js",
+		"website": "http://google.com/analytics"
+	},
+	"Haskell": {
+		"cats": [
+			27
+		],
+		"icon": "Haskell.png",
+		"website": "http://wiki.haskell.org/Haskell"
+	},
+	"Java": {
+		"cats": [
+			27
+		],
+		"cookies": {
+			"JSESSIONID": ""
+		},
+		"description": "Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+		"icon": "Java.png",
+		"website": "http://java.com"
+	},
+	"Java Servlet": {
+		"cats": [
+			18
+		],
+		"headers": {
+			"X-Powered-By": "Servlet(?:\\/([\\d.]+))?\\;version:\\1"
+		},
+		"icon": "Java.png",
+		"implies": "Java",
+		"website": "http://www.oracle.com/technetwork/java/index-jsp-135475.html"
+	},
+	"Jenkins": {
+		"cats": [
+			44
+		],
+		"description": "Jenkins is an open-source automation tool written in Java with plugins built for Continuous Integration (CI) purposes.",
+		"headers": {
+			"X-Jenkins": "([\\d.]+)\\;version:\\1"
+		},
+		"html": "\u003cspan class=\"jenkins_ver\"\u003e\u003ca href=\"https://jenkins\\.io/\"\u003eJenkins ver\\. ([\\d.]+)\\;version:\\1",
+		"icon": "Jenkins.png",
+		"implies": "Java",
+		"js": {
+			"jenkinsCIGlobal": "",
+			"jenkinsRules": ""
+		},
+		"website": "https://jenkins.io/"
+	},
+	"Joomla": {
+		"cats": [
+			1
+		],
+		"cpe": "cpe:/a:joomla:joomla",
+		"description": "Joomla is a free and open-source content management system for publishing web content.",
+		"headers": {
+			"X-Content-Encoded-By": "Joomla! ([\\d.]+)\\;version:\\1"
+		},
+		"html": "(?:\u003cdiv[^\u003e]+id=\"wrapper_r\"|\u003c(?:link|script)[^\u003e]+(?:feed|components)/com_|\u003ctable[^\u003e]+class=\"pill)\\;confidence:50",
+		"icon": "Joomla.svg",
+		"implies": "PHP",
+		"js": {
+			"Joomla": "",
+			"jcomments": ""
+		},
+		"meta": {
+			"generator": "Joomla!(?: ([\\d.]+))?\\;version:\\1"
+		},
+		"oss": true,
+		"url": "option=com_",
+		"website": "https://www.joomla.org"
+	},
+	"Laravel": {
+		"cats": [
+			18
+		],
+		"cookies": {
+			"laravel_session": ""
+		},
+		"cpe": "cpe:/a:laravel:laravel",
+		"description": "Laravel is a free, open-source PHP web framework.",
+		"icon": "Laravel.svg",
+		"implies": "PHP",
+		"js": {
+			"Laravel": ""
+		},
+		"website": "https://laravel.com"
+	},
+	"Microsoft ASP.NET": {
+		"cats": [
+			18
+		],
+		"cookies": {
+			"ASP.NET_SessionId": "",
+			"ASPSESSION": ""
+		},
+		"cpe": "cpe:/a:microsoft:asp.net",
+		"description": "ASP.NET is an open-source, server-side web-application framework designed for web development to produce dynamic web pages.",
+		"headers": {
+			"X-AspNet-Version": "(.+)\\;version:\\1",
+			"X-Powered-By": "^ASP\\.NET"
+		},
+		"html": "\u003cinput[^\u003e]+name=\"__VIEWSTATE",
+		"icon": "Microsoft ASP.NET.png",
+		"implies": "IIS\\;confidence:50",
+		"url": "\\.aspx?(?:$|\\?)",
+		"website": "https://www.asp.net"
+	},
+	"MySQL": {
+		"cats": [
+			34
+		],
+		"cpe": "cpe:/a:mysql:mysql",
+		"description": "MySQL is an open-source relational database management system.",
+		"icon": "MySQL.svg",
+		"website": "http://mysql.com"
+	},
+	"Nginx": {
+		"cats": [
+			22,
+			64
+		],
+		"cpe": "cpe:/a:nginx:nginx",
+		"description": "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.",
+		"headers": {
+			"Server": "nginx(?:/([\\d.]+))?\\;version:\\1",
+			"X-Fastcgi-Cache": ""
+		},
+		"icon": "Nginx.svg",
+		"website": "http://nginx.org/en"
+	},
+	"Node.js": {
+		"cats": [
+			27
+		],
+		"cpe": "cpe:/a:nodejs:node.js",
+		"description": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser.",
+		"icon": "node.js.png",
+		"website": "http://nodejs.org"
+	},
+	"PHP": {
+		"cats": [
+			27
+		],
+		"cookies": {
+			"PHPSESSID": ""
+		},
+		"cpe": "cpe:/a:php:php",
+		"description": "PHP is a general-purpose scripting language used for web development.",
+		"headers": {
+			"Server": "php/?([\\d.]+)?\\;version:\\1",
+			"X-Powered-By": "^php/?([\\d.]+)?\\;version:\\1"
+		},
+		"icon": "PHP.svg",
+		"url": "\\.php(?:$|\\?)",
+		"website": "http://php.net"
+	},
+	"Python": {
+		"cats": [
+			27
+		],
+		"cpe": "cpe:/a:python:python",
+		"description": "Python is an interpreted and general-purpose programming language.",
+		"headers": {
+			"Server": "(?:^|\\s)Python(?:/([\\d.]+))?\\;version:\\1"
+		},
+		"icon": "Python.png",
+		"website": "http://python.org"
+	},
+	"Raspbian": {
+		"cats": [
+			28
+		],
+		"description": "Raspbian is a free operating system for the Raspberry Pi hardware.",
+		"headers": {
+			"Server": "Raspbian",
+			"X-Powered-By": "Raspbian"
+		},
+		"icon": "Raspbian.svg",
+		"website": "https://www.raspbian.org/"
+	},
+	"React": {
+		"cats": [
+			12
+		],
+		"cpe": "cpe:/a:facebook:react",
+		"description": "React is an open-source JavaScript library for building user interfaces or UI components.",
+		"dom": {
+			"body \u003e div": {
+				"properties": {
+					"_reactRootContainer": ""
+				}
+			}
+		},
+		"html": "\u003c[^\u003e]+data-react",
+		"icon": "React.png",
+		"js": {
+			"React.version": "^(.+)$\\;version:\\1",
+			"react.version": "^(.+)$\\;version:\\1"
+		},
+		"scripts": [
+			"react(?:-with-addons)?[.-]([\\d.]*\\d)[^/]*\\.js",
+			"/([\\d.]+)/react(?:\\.min)?\\.js",
+			"^react\\b.*\\.js"
+		],
+		"website": "https://reactjs.org"
+	},
+	"Red Hat": {
+		"cats": [
+			28
+		],
+		"cpe": "cpe:/o:redhat:linux",
+		"description": "Red Hat is an open-source Linux operating system.",
+		"headers": {
+			"Server": "Red Hat",
+			"X-Powered-By": "Red Hat"
+		},
+		"icon": "Red Hat.svg",
+		"website": "https://www.redhat.com"
+	},
+	"Reddit": {
+		"cats": [
+			2
+		],
+		"html": "(?:\u003ca[^\u003e]+Powered by Reddit|powered by \u003ca[^\u003e]+\u003ereddit\u003c)",
+		"icon": "Reddit.png",
+		"implies": "Python",
+		"js": {
+			"reddit": ""
+		},
+		"url": "^https?://(?:www\\.)?reddit\\.com",
+		"website": "http://code.reddit.com"
+	},
+	"Ruby on Rails": {
+		"cats": [
+			18
+		],
+		"cookies": {
+			"_session_id": "\\;confidence:75"
+		},
+		"cpe": "cpe:/a:rubyonrails:rails",
+		"description": "Ruby on Rails is a server-side web application framework written in Ruby under the MIT License.",
+		"headers": {
+			"Server": "mod_(?:rails|rack)",
+			"X-Powered-By": "mod_(?:rails|rack)"
+		},
+		"icon": "Ruby on Rails.png",
+		"implies": "Ruby",
+		"meta": {
+			"csrf-param": "^authenticity_token$\\;confidence:50"
+		},
+		"scripts": "/assets/application-[a-z\\d]{32}/\\.js\\;confidence:50",
+		"website": "https://rubyonrails.org"
+	},
+	"Scala": {
+		"cats": [
+			27
+		],
+		"description": "Scala is a general-purpose programming language providing support for both object-oriented programming and functional programming.",
+		"icon": "Scala.png",
+		"website": "http://www.scala-lang.org"
+	},
+	"Spring": {
+		"cats": [
+			18
+		],
+		"headers": {
+			"X-Application-Context": ""
+		},
+		"icon": "Spring.png",
+		"implies": "Java",
+		"website": "https://spring.io/"
+	},
+	"Symfony": {
+		"cats": [
+			18
+		],
+		"cookies": {
+			"sf_redirect": ""
+		},
+		"description": "Symfony is a PHP web application framework and a set of reusable PHP components/libraries.",
+		"html": [
+			"\u003cdiv id=\"sfwdt[^\"]+\" class=\"[^\"]*sf-toolbar"
+		],
+		"icon": "Symfony.svg",
+		"implies": "PHP",
+		"js": {
+			"Sfjs": ""
+		},
+		"website": "https://symfony.com"
+	},
+	"ThinkPHP": {
+		"cats": [
+			18
+		],
+		"headers": {
+			"X-Powered-By": "ThinkPHP"
+		},
+		"icon": "ThinkPHP.png",
+		"implies": "PHP",
+		"website": "http://www.thinkphp.cn"
+	},
+	"gRPC": {
+		"cats": [
+			18
+		],
+		"headers": {
+			"Content-Type": "^application\\/grpc"
+		},
+		"icon": "gRPC.png",
+		"website": "https://grpc.io"
+	}
+}
